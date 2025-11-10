@@ -1,4 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.font-lato {
+  font-family: "Lato", sans-serif;
+}
+
+a.active {
+  color: #59f2d8;
+  text-decoration: underline;
+  text-decoration-color: #f9d342;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+}
+
 @import "tailwindcss";
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark, cupcake;
 }
+
+/* color
+navbar - #05305a active- #32bee9 text-white
+footer - #012147 to 
+heading color - #282c3d
+
+
+*/
