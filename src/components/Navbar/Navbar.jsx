@@ -13,7 +13,7 @@ const Navbar = () => {
       <li>
         <NavLink to={"/"}>Home</NavLink>
       </li>
-      <li className="flex items-center">
+      <li>
         <NavLink to={"/find-partners"}>Find Partners</NavLink>
       </li>
       {user && (

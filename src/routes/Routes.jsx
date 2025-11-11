@@ -7,6 +7,7 @@ import FindPartners from "../pages/FindPartners";
 import Home from "../pages/Home";
 import MyConnections from "../pages/MyConnections";
 import NotFoundPage from "../pages/NotFoundPage";
+import PartnerDetails from "../pages/PartnerDetails";
 import UserDetails from "../pages/UserDetails";
 import PrivateRouter from "../PrivateRouter/PrivateRouter";
 
@@ -47,6 +48,14 @@ const router = createBrowserRouter([
         path: "/find-partners",
         Component: FindPartners,
         loader: () => fetch("http://localhost:3000/partner"),
+      },
+      {
+        path: "/partner-details/:id",
+        element: (
+          <PrivateRouter>
+            <PartnerDetails></PartnerDetails>
+          </PrivateRouter>
+        ),
       },
       {
         path: "/user-details",

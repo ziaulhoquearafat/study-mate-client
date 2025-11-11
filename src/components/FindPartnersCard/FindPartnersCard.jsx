@@ -1,5 +1,7 @@
+import { Link } from "react-router";
+
 const FindPartnersCard = ({ partner }) => {
-  const { profileimage, subject, studyMode, experienceLevel } = partner;
+  const { profileimage, subject, studyMode, experienceLevel, _id } = partner;
 
   return (
     <div className="border-2 border-gray-200 rounded-2xl shadow-sm p-5 w-full max-w-sm mx-auto hover:shadow-md transition-all duration-300 hover:-translate-y-2 bg-white">
@@ -25,9 +27,12 @@ const FindPartnersCard = ({ partner }) => {
           </p>
         </div>
 
-        <button className="btn btn-outline btn-primary rounded-full mt-2 font-montserrat">
+        <Link
+          to={`/partner-details/${_id}`}
+          className="btn btn-outline btn-primary rounded-full mt-2 font-montserrat"
+        >
           View Profile
-        </button>
+        </Link>
       </div>
     </div>
   );
