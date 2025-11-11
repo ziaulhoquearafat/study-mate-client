@@ -7,7 +7,8 @@ import FindPartners from "../pages/FindPartners";
 import Home from "../pages/Home";
 import MyConnections from "../pages/MyConnections";
 import NotFoundPage from "../pages/NotFoundPage";
-import Profile from "../pages/Profile";
+import UserDetails from "../pages/UserDetails";
+import PrivateRouter from "../PrivateRouter/PrivateRouter";
 
 const router = createBrowserRouter([
   {
@@ -28,19 +29,31 @@ const router = createBrowserRouter([
       },
       {
         path: "/create-partner-profile",
-        Component: CreatePartnerProfile,
+        element: (
+          <PrivateRouter>
+            <CreatePartnerProfile></CreatePartnerProfile>
+          </PrivateRouter>
+        ),
       },
       {
         path: "/my-connections",
-        Component: MyConnections,
+        element: (
+          <PrivateRouter>
+            <MyConnections></MyConnections>
+          </PrivateRouter>
+        ),
       },
       {
         path: "/find-partners",
         Component: FindPartners,
       },
       {
-        path: "/profile",
-        Component: Profile,
+        path: "/user-details",
+        element: (
+          <PrivateRouter>
+            <UserDetails></UserDetails>
+          </PrivateRouter>
+        ),
       },
       {
         path: "*",
