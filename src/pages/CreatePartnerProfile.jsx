@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import toast from "react-hot-toast";
 import { AuthContext } from "../context/AuthContext";
 
 const CreatePartnerProfile = () => {
@@ -17,6 +18,23 @@ const CreatePartnerProfile = () => {
       email: e.target.email.value,
     };
     console.log(partnerProfileInfo);
+
+    fetch("http://localhost:3000/partner", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(partnerProfileInfo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        toast.success("Partner Profile Create Successfully");
+        e.target.reset();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const { user } = useContext(AuthContext);
@@ -82,7 +100,7 @@ const CreatePartnerProfile = () => {
               type="text"
               name="availabilityTime"
               className="input input-bordered w-full outline-0 rounded-full"
-              placeholder="9 pm to 11 pm"
+              placeholder="Afternoon 3-6 PM"
             />
           </div>
           <div>
@@ -105,7 +123,7 @@ const CreatePartnerProfile = () => {
               <option defaultValue={""} disabled>
                 Select Experience Level
               </option>
-              <option value="Entry-level">Entry-level</option>
+              <option value="Beginner">Beginner</option>
               <option value="Intermediate">Intermediate</option>
               <option value="Mid-level">Mid-level</option>
               <option value="Expert">Expert</option>

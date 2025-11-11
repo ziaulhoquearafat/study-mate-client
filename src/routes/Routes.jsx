@@ -46,6 +46,7 @@ const router = createBrowserRouter([
       {
         path: "/find-partners",
         Component: FindPartners,
+        loader: () => fetch("http://localhost:3000/partner"),
       },
       {
         path: "/user-details",
