@@ -40,6 +40,9 @@ const Register = () => {
       .catch((err) => {
         console.log(err.message);
         toast.error(err.messagge);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
@@ -54,6 +57,9 @@ const Register = () => {
       .catch((err) => {
         console.log(err.messagge);
         toast.error(err.message);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 

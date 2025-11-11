@@ -31,6 +31,9 @@ const Login = () => {
       .catch((err) => {
         console.log(err.message);
         toast.error(err.message);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
@@ -45,6 +48,9 @@ const Login = () => {
       .catch((err) => {
         console.log(err.messagge);
         toast.error(err.message);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 

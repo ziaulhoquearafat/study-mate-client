@@ -1,6 +1,11 @@
+import { useContext } from "react";
+import toast from "react-hot-toast";
 import { Link, NavLink } from "react-router";
+import { GridLoader } from "react-spinners";
+import { AuthContext } from "../../context/AuthContext";
 
 const Navbar = () => {
+  const { user, setUser, LogOutFunc, loading } = useContext(AuthContext);
   const links = (
     <>
       <li>
@@ -9,14 +14,32 @@ const Navbar = () => {
       <li>
         <NavLink to={"/find-partners"}>Find Partners</NavLink>
       </li>
-      <li>
-        <NavLink to={"/create-partner-profile"}>Create Partner Profile</NavLink>
-      </li>
-      <li>
-        <NavLink to={"/my-connections"}>My Connections</NavLink>
-      </li>
+      {user && (
+        <>
+          <li>
+            <NavLink to={"/create-partner-profile"}>
+              Create Partner Profile
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to={"/my-connections"}>My Connections</NavLink>
+          </li>
+        </>
+      )}
     </>
   );
+
+  const handleLogOut = () => {
+    console.log("clicked");
+    LogOutFunc()
+      .then(() => {
+        toast.success("LogOut Successfull");
+        setUser(null);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
 
   return (
     <div className="navbar bg-[#05305a] shadow-sm">
@@ -55,14 +78,27 @@ const Navbar = () => {
           {links}
         </ul>
       </div>
-      <div className="navbar-end flex gap-3 font-montserrat">
-        <Link to={"/login"} className="btn btn-secondary text-white">
-          Login
-        </Link>
-        <Link to={"/register"} className="btn btn-primary text-white">
-          Register
-        </Link>
-      </div>
+      {loading ? (
+        <div className="fixed inset-0 flex justify-center items-center bg-white z-50">
+          <GridLoader color="#007180" />
+        </div>
+      ) : user ? (
+        <div className="navbar-end flex gap-2 items-center">
+          <img src={user?.photoURL} alt="" className="w-10 h-10 rounded-full" />
+          <button onClick={handleLogOut} className="btn btn-primary text-white">
+            Log Out
+          </button>
+        </div>
+      ) : (
+        <div className="navbar-end flex gap-3 font-montserrat">
+          <Link to={"/login"} className="btn btn-secondary text-white">
+            Login
+          </Link>
+          <Link to={"/register"} className="btn btn-primary text-white">
+            Register
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
