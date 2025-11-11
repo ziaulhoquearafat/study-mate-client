@@ -6,6 +6,8 @@ import CreatePartnerProfile from "../pages/CreatePartnerProfile";
 import FindPartners from "../pages/FindPartners";
 import Home from "../pages/Home";
 import MyConnections from "../pages/MyConnections";
+import NotFoundPage from "../pages/NotFoundPage";
+import Profile from "../pages/Profile";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
       {
         path: "/find-partners",
         Component: FindPartners,
+      },
+      {
+        path: "/profile",
+        Component: Profile,
+      },
+      {
+        path: "*",
+        Component: NotFoundPage,
       },
     ],
   },
