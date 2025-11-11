@@ -11,7 +11,7 @@ const Register = () => {
     setShow(!show);
   };
 
-  const { createAccountFunc, ProfileUpdateFunc, googleSignIn } =
+  const { createAccountFunc, ProfileUpdateFunc, googleSignIn, setLoading } =
     useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -28,6 +28,7 @@ const Register = () => {
       .then((result) => {
         ProfileUpdateFunc(displayName, photoURL).then(() => {
           console.log(result.user);
+          setLoading(false);
           toast.success("Registration Successfully");
           navigate("/");
         });
@@ -46,6 +47,7 @@ const Register = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
+        setLoading(false);
         toast.success("Registration Successfull");
         navigate("/");
       })

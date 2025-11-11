@@ -12,7 +12,7 @@ const Login = () => {
     setShow(!show);
   };
 
-  const { LoginFunc, googleSignIn } = useContext(AuthContext);
+  const { LoginFunc, googleSignIn, setLoading } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -24,6 +24,7 @@ const Login = () => {
     LoginFunc(email, password)
       .then((result) => {
         console.log(result.user);
+        setLoading(false);
         toast.success("Login Successfull");
         navigate("/");
       })
@@ -37,6 +38,7 @@ const Login = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
+        setLoading(false);
         toast.success("Login Successfull");
         navigate("/");
       })
