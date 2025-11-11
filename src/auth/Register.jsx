@@ -24,6 +24,13 @@ const Register = () => {
     const password = e.target.password.value;
     // console.log({ email, password, photoURL, displayName });
 
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+    if (!passwordRegex.test(password)) {
+      return toast.error(
+        "Password must have at least 6 characters, including one uppercase and one lowercase letter."
+      );
+    }
     createAccountFunc(email, password)
       .then((result) => {
         ProfileUpdateFunc(displayName, photoURL).then(() => {
