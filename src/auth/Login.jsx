@@ -1,19 +1,49 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import toast from "react-hot-toast";
 import { FaEye } from "react-icons/fa";
 import { IoIosEyeOff } from "react-icons/io";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+import { AuthContext } from "../context/AuthContext";
 
 const Login = () => {
   const [show, setShow] = useState();
+
   const handleShowPassword = () => {
     setShow(!show);
   };
+
+  const { LoginFunc, googleSignIn } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log({ email, password });
+    // console.log({ email, password });
+
+    LoginFunc(email, password)
+      .then((result) => {
+        console.log(result.user);
+        toast.success("Login Successfull");
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err.message);
+        toast.error(err.message);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        console.log(result.user);
+        toast.success("Login Successfull");
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err.messagge);
+        toast.error(err.message);
+      });
   };
 
   return (
@@ -82,6 +112,7 @@ const Login = () => {
             <div>
               {/* Google */}
               <button
+                onClick={handleGoogleSignIn}
                 type="button"
                 className="btn bg-white w-full text-black border-[#e5e5e5]"
               >
