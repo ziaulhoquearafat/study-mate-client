@@ -50,7 +50,7 @@ const PartnerDetails = () => {
   };
 
   return (
-    <div className="py-12 bg-gray-50 min-h-screen">
+    <div className="py-12 bg-[#dee6f0] min-h-screen">
       <div className="w-11/12 mx-auto max-w-6xl bg-white rounded-2xl shadow-sm p-10 border border-gray-100">
         <div className="flex flex-col md:flex-row gap-10 items-start">
           {/* Profile Image */}

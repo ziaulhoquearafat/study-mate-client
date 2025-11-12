@@ -5,7 +5,7 @@ import TopStudyPartners from "../components/TopStudyPartners/TopStudyPartners";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-[#dee6f0]">
       <Banner />
       <h1>This is Homepage</h1>
       <TopStudyPartners />

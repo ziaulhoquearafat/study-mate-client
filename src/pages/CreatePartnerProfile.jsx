@@ -40,7 +40,7 @@ const CreatePartnerProfile = () => {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="w-2xl my-10 mx-auto border-2 border-gray-300 shadow-2xl rounded-xl bg-white/80">
+    <div className="w-2xl my-10 mx-auto border-2 border-gray-300 shadow-2xl rounded-xl bg-[#dee6f0]">
       <form
         className="py-14 w-11/12 mx-auto"
         onSubmit={handleCreatePartnerSubmit}
