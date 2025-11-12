@@ -10,7 +10,11 @@ const MyConnections = () => {
 
   useEffect(() => {
     if (!user?.email) return;
-    fetch(`http://localhost:3000/partner-request?userEmail=${user.email}`)
+    fetch(`http://localhost:3000/partner-request?userEmail=${user.email}`, {
+      headers: {
+        authorization: `Bearrer ${user.accessToken}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => setPartners(data));
   }, [user]);

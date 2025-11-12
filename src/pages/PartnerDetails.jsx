@@ -10,7 +10,11 @@ const PartnerDetails = () => {
   const [refetch, setRefetch] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/partner/${id}`)
+    fetch(`http://localhost:3000/partner/${id}`, {
+      headers: {
+        authorization: `Bearrer ${user.accessToken}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
