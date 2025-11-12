@@ -20,7 +20,7 @@ const PartnerDetails = () => {
         console.log(data);
         setPartners(data.result);
       });
-  }, [id, refetch]);
+  }, [id, refetch, user]);
 
   const handlePartnerRequest = () => {
     const partnerReq = {
