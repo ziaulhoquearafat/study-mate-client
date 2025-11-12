@@ -93,11 +93,11 @@ const Login = () => {
               </span>
             </div>
 
-            <div>
+            {/* <div>
               <Link to={"/forgot-password"} className="link link-hover">
                 Forgot password?
               </Link>
-            </div>
+            </div> */}
 
             <div className="pt-4">
               <button className="btn w-full hover:bg-[#012244] bg-[#05305a] text-white font-semibold">

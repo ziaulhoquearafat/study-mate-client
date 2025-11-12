@@ -4,7 +4,7 @@ const FindPartnersCard = ({ partner }) => {
   const { profileimage, subject, studyMode, experienceLevel, _id } = partner;
 
   return (
-    <div className="border-2 border-gray-200 rounded-2xl shadow-sm p-5 w-full max-w-sm mx-auto hover:shadow-md transition-all duration-300 hover:-translate-y-2 bg-white">
+    <div className="border-2 border-gray-200 rounded-2xl shadow-sm p-5 w-full max-w-sm mx-auto hover:shadow-md transition-all duration-300 hover:-translate-y-2 bg-white/80">
       <div className="flex flex-col items-center gap-3">
         <img
           src={profileimage}

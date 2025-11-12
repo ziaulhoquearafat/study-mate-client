@@ -58,6 +58,14 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/partner-profile/:id",
+        element: (
+          <PrivateRouter>
+            <PartnerDetails></PartnerDetails>
+          </PrivateRouter>
+        ),
+      },
+      {
         path: "/user-details",
         element: (
           <PrivateRouter>
