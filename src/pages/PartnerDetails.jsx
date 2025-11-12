@@ -22,6 +22,9 @@ const PartnerDetails = () => {
     const partnerReq = {
       name: partners.name,
       email: partners.email,
+      subject: partners.subject,
+      studyMode: partners.studyMode,
+      location: partners.location,
       profileimage: partners.profileimage,
       requestEmail: user?.email,
       send_at: new Date(),
