@@ -5,8 +5,8 @@ const UserDetails = () => {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="py-12 bg-[#dee6f0] min-h-screen">
-      <div className="w-11/12 mx-auto max-w-6xl bg-white rounded-2xl shadow-sm p-10 border border-gray-100">
+    <div className="py-12 bg-[#dee6f0] min-h-screen dark:bg-gray-950">
+      <div className="w-11/12 mx-auto max-w-6xl bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-10 border border-gray-100">
         <div className="flex flex-col md:flex-row gap-10 items-start">
           {/* Profile Image */}
           <div className="w-full md:w-1/3">
@@ -19,11 +19,11 @@ const UserDetails = () => {
 
           {/* Details */}
           <div className="">
-            <h1 className="text-4xl font-bold text-[#05305a] mb-2 border-b pb-3">
+            <h1 className="text-4xl font-bold text-[#05305a] dark:text-white mb-2 border-b pb-3">
               {user.displayName}
             </h1>
 
-            <h1 className="text-base font-bold text-[#05305a] mb-6 pb-3">
+            <h1 className="text-base font-bold text-[#05305a] dark:text-white mb-6 pb-3">
               e-mail: {user.email}
             </h1>
           </div>

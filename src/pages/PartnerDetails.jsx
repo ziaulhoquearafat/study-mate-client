@@ -54,8 +54,8 @@ const PartnerDetails = () => {
   };
 
   return (
-    <div className="py-12 bg-[#dee6f0] min-h-screen">
-      <div className="w-11/12 mx-auto max-w-6xl bg-white rounded-2xl shadow-sm p-10 border border-gray-100">
+    <div className="py-12 bg-[#dee6f0] min-h-screen dark:bg-gray-950">
+      <div className="w-11/12 mx-auto max-w-6xl bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-10 border border-gray-100">
         <div className="flex flex-col md:flex-row gap-10 items-start">
           {/* Profile Image */}
           <div className="w-full md:w-1/3">
@@ -68,11 +68,11 @@ const PartnerDetails = () => {
 
           {/* Details */}
           <div className="flex-1">
-            <h1 className="text-4xl font-bold text-[#05305a] mb-6 border-b pb-3">
+            <h1 className="text-4xl font-bold text-[#05305a] dark:text-white mb-6 border-b pb-3">
               {partners.name}
             </h1>
 
-            <div className="space-y-4 text-lg text-gray-700">
+            <div className="space-y-4 text-lg text-gray-700 dark:text-white">
               <div className="flex justify-between border-b pb-2">
                 <span className="font-semibold">Study Mode</span>
                 <span>{partners.studyMode}</span>
