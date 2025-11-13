@@ -8,25 +8,35 @@ const Footer = () => {
       <div className="w-11/12 mx-auto py-10 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
         {/* About section prothome */}
         <div>
-          <h6 className="text-lg font-semibold mb-4">About</h6>
           <p className="text-base text-gray-200 mb-4 leading-relaxed">
-            StudyMate
+            <p className="text-xl md:text-2xl uppercase font-montserrat font-bold text-white">
+              Study<span className="text-amber-300">Mate</span>
+            </p>
             <br />
             Helps students find and connect with study partners, making learning
             more interactive and effective.
           </p>
           <div className="flex space-x-4 cursor-pointer">
             {/* Facebook */}
-            <FaFacebook size={25} />
+            <a href="https://facebook.com" target="_blank">
+              <FaFacebook size={25} />
+            </a>
 
             {/* X */}
-            <FaSquareXTwitter size={25} />
+            <a href="https://x.com/" target="_blank">
+              <FaSquareXTwitter size={25} />
+            </a>
 
             {/* LinkedIn */}
-            <FaLinkedin size={25} />
+            <a href="https://www.linkedin.com/" target="_blank">
+              <FaLinkedin size={25} />
+            </a>
 
             {/* Instagram */}
-            <FaInstagramSquare size={25} />
+            <a href="https://www.instagram.com/" target="_blank">
+              {" "}
+              <FaInstagramSquare size={25} />
+            </a>
           </div>
         </div>
 

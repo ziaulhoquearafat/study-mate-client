@@ -44,7 +44,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-[#05305a]">
+    <div className="bg-[#05305a] relative z-50">
       <div className="navbar w-11/12 mx-auto shadow-sm p-0">
         <div className="navbar-start">
           <div className="dropdown">
@@ -72,9 +72,9 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="text-xl md:text-2xl uppercase font-montserrat font-bold text-white">
-            StudyMate
-          </a>
+          <p className="text-xl md:text-2xl uppercase font-montserrat font-bold text-white">
+            Study<span className="text-amber-300">Mate</span>
+          </p>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-montserrat text-base font-semibold text-white">
