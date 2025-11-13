@@ -28,7 +28,9 @@ const FindPartners = () => {
   // ✅ Combined fetch function (search + sort)
   const fetchData = (search, sort) => {
     setLoading(true);
-    fetch(`http://localhost:3000/search?search=${search}&sort=${sort}`)
+    fetch(
+      `https://study-mate-server-nu.vercel.app/search?search=${search}&sort=${sort}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setPartners(data);
@@ -41,7 +43,7 @@ const FindPartners = () => {
   };
 
   return (
-    <div className="bg-[#dee6f0] dark:bg-gray-950">
+    <div className="bg-[#dee6f0] dark:bg-gray-900">
       <div className="w-11/12 mx-auto py-10">
         <div className="flex justify-between items-center flex-wrap gap-4">
           {/* LEFT — Sort */}

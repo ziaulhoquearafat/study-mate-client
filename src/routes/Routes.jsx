@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       {
         path: "/find-partners",
         Component: FindPartners,
-        loader: () => fetch("http://localhost:3000/partner"),
+        loader: () => fetch("https://study-mate-server-nu.vercel.app/partner"),
       },
       {
         path: "/partner-details/:id",

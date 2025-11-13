@@ -71,14 +71,14 @@ const Register = () => {
   };
 
   return (
-    <div className="bg-[#ffffff] min-h-screen flex flex-col justify-center items-center p-4 sm:p-10">
+    <div className="bg-[#ffffff] dark:bg-gray-900 min-h-screen flex flex-col justify-center items-center p-4 sm:p-10">
       <div>
-        <h1 className="text-3xl font-extrabold uppercase font-montserrat text-[#282c3d] text-center mb-3">
+        <h1 className="text-3xl font-extrabold uppercase font-montserrat text-[#282c3d] dark:text-white text-center mb-3">
           Create An Account
         </h1>
       </div>
 
-      <div className="w-full max-w-sm sm:max-w-md border-2 border-gray-200 shadow-2xl rounded-xl px-6 py-8 bg-white">
+      <div className="w-full max-w-sm sm:max-w-md border-2 border-gray-200 shadow-2xl rounded-xl px-6 py-8 bg-white dark:bg-gray-800">
         <form onSubmit={handleSubmit}>
           <fieldset className="fieldset space-y-2">
             <div>

@@ -10,11 +10,14 @@ const MyConnections = () => {
 
   useEffect(() => {
     if (!user?.email) return;
-    fetch(`http://localhost:3000/partner-request?userEmail=${user.email}`, {
-      headers: {
-        authorization: `Bearer ${user.accessToken}`,
-      },
-    })
+    fetch(
+      `https://study-mate-server-nu.vercel.app/partner-request?userEmail=${user.email}`,
+      {
+        headers: {
+          authorization: `Bearer ${user.accessToken}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => setPartners(data));
   }, [user]);
@@ -36,7 +39,7 @@ const MyConnections = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/partner-request/${id}`, {
+        fetch(`https://study-mate-server-nu.vercel.app/partner-request/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -63,14 +66,17 @@ const MyConnections = () => {
       email: form.email.value,
     };
 
-    fetch(`http://localhost:3000/partner-request/${selectedPartner._id}`, {
-      method: "PUT",
-      headers: {
-        authorization: `Bearrer ${user.accessToken}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
+    fetch(
+      `https://study-mate-server-nu.vercel.app/partner-request/${selectedPartner._id}`,
+      {
+        method: "PUT",
+        headers: {
+          authorization: `Bearrer ${user.accessToken}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    )
       .then((res) => res.json())
       .then(() => {
         setPartners(
@@ -85,7 +91,7 @@ const MyConnections = () => {
   };
 
   return (
-    <div className="py-10 px-3 sm:px-6 bg-[#dee6f0] dark:bg-gray-950 min-h-screen">
+    <div className="py-10 px-3 sm:px-6 bg-[#c0cad6] dark:bg-gray-900 min-h-screen">
       <h1 className="text-3xl sm:text-4xl font-extrabold text-[#05305a] dark:text-white text-center mb-8">
         My Connections
       </h1>

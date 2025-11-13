@@ -10,7 +10,7 @@ const PartnerDetails = () => {
   const [refetch, setRefetch] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/partner/${id}`, {
+    fetch(`https://study-mate-server-nu.vercel.app/partner/${id}`, {
       headers: {
         authorization: `Bearrer ${user.accessToken}`,
       },
@@ -34,14 +34,17 @@ const PartnerDetails = () => {
       send_at: new Date(),
     };
 
-    fetch(`http://localhost:3000/partner-request/${partners._id}`, {
-      method: "POST",
-      headers: {
-        authorization: `Bearrer ${user.accessToken}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(partnerReq),
-    })
+    fetch(
+      `https://study-mate-server-nu.vercel.app/partner-request/${partners._id}`,
+      {
+        method: "POST",
+        headers: {
+          authorization: `Bearrer ${user.accessToken}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(partnerReq),
+      }
+    )
       .then((res) => res.json)
       .then((data) => {
         toast.success("Request Sent Successfull");

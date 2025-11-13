@@ -20,7 +20,7 @@ const CreatePartnerProfile = () => {
       email: e.target.email.value,
     };
 
-    fetch("http://localhost:3000/partner", {
+    fetch("https://study-mate-server-nu.vercel.app/partner", {
       method: "POST",
       headers: {
         authorization: `Bearrer ${user.accessToken}`,
@@ -37,7 +37,7 @@ const CreatePartnerProfile = () => {
   };
 
   return (
-    <div className="bg-[#dee6f0] dark:bg-gray-950 py-10 px-4">
+    <div className="bg-[#dee6f0] dark:bg-gray-900 py-10 px-4">
       <div className="max-w-2xl mx-auto border border-gray-300 shadow-xl rounded-2xl bg-white dark:bg-gray-900 dark:border-gray-700">
         <form
           className="py-10 px-6 sm:px-10"

@@ -5,7 +5,7 @@ const TopRatedPartners = () => {
   const [partners, setPartners] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/partners/top-rated")
+    fetch("https://study-mate-server-nu.vercel.app/partners/top-rated")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -15,7 +15,7 @@ const TopRatedPartners = () => {
   }, []);
 
   return (
-    <section className="bg-[#dee6f0] py-16 dark:bg-gray-950">
+    <section className="bg-[#dee6f0] py-16 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="font-montserrat text-4xl mb-10 text-center font-bold text-[#05305a] dark:text-white">
           Top Rated Study Partners

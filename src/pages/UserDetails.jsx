@@ -5,7 +5,7 @@ const UserDetails = () => {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="py-12 bg-[#dee6f0] min-h-screen dark:bg-gray-950">
+    <div className="py-12 bg-[#dee6f0] min-h-screen dark:bg-gray-900">
       <div className="w-11/12 mx-auto max-w-6xl bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-10 border border-gray-100">
         <div className="flex flex-col md:flex-row gap-10 items-start">
           {/* Profile Image */}
