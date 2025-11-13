@@ -8,7 +8,7 @@ const TopRatedPartners = () => {
     fetch("https://study-mate-server-nu.vercel.app/partners/top-rated")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setPartners(data);
       })
       .catch((err) => console.error(err));

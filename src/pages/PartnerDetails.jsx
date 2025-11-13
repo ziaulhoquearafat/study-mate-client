@@ -17,7 +17,7 @@ const PartnerDetails = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setPartners(data.result);
       });
   }, [id, refetch, user]);
