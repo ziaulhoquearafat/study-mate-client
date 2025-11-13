@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import toast from "react-hot-toast";
 import { FaEye } from "react-icons/fa";
 import { IoIosEyeOff } from "react-icons/io";
@@ -12,7 +12,10 @@ const Login = () => {
     setShow(!show);
   };
 
-  const { LoginFunc, googleSignIn, setLoading } = useContext(AuthContext);
+  const emailRef = useRef(null);
+
+  const { LoginFunc, googleSignIn, setLoading, forgotPassword } =
+    useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -54,6 +57,21 @@ const Login = () => {
       });
   };
 
+  const handleForgotPassword = (e) => {
+    e.preventDefault();
+    // console.log("clicked");
+    const email = emailRef.current.value;
+    forgotPassword(email)
+      .then(() => {
+        setLoading(false);
+        toast.success("check your email");
+        emailRef.current.value = "";
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
+
   return (
     <div className="bg-[#ffffff] min-h-screen flex flex-col justify-center items-center p-4 sm:p-10">
       <div>
@@ -69,7 +87,7 @@ const Login = () => {
               <label className="label">Email</label>
               <input
                 type="email"
-                // ref={emailRef}
+                ref={emailRef}
                 name="email"
                 // value={loginEmail}
                 // onChange={(e) => setLoginEmail(e.target.value)}
@@ -93,11 +111,11 @@ const Login = () => {
               </span>
             </div>
 
-            {/* <div>
-              <Link to={"/forgot-password"} className="link link-hover">
+            <div>
+              <p onClick={handleForgotPassword} className="link link-hover">
                 Forgot password?
-              </Link>
-            </div> */}
+              </p>
+            </div>
 
             <div className="pt-4">
               <button className="btn w-full hover:bg-[#012244] bg-[#05305a] text-white font-semibold">
