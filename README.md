@@ -1,16 +1,29 @@
-# React + Vite
+# 🎓 Find Study Partner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application designed to help students find the perfect study partner based on their subjects and experience level. Built with React, Tailwind CSS, and Firebase — ensuring smooth UI, secure authentication, and responsive design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Site
 
-## React Compiler
+🔗 [Find Study Partner - Live Website](https://your-live-site-url.com)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔍 **Search by Subject:** Users can easily search for study partners based on specific subjects.
+- 📊 **Sort by Experience Level:** Find partners who match your preferred expertise — Beginner, Intermediate, Mid-level, or Expert.
+- 🔐 **Secure Authentication:** Integrated with Firebase for safe and smooth user login and registration.
+- 🧑‍🤝‍🧑 **Partner Listing & Profile:** Displays all available partners with their details like name, subject, and experience level.
+- 💬 **Interactive UI:** Modern responsive design using Tailwind CSS and Swiper.js for smooth animations and sliders.
+- 🌈 **Toast Notifications:** Real-time feedback for user actions using React Hot Toast and SweetAlert2.
+
+---
+
+## 🛠️ Technologies Used
+
+**Frontend:** React, Tailwind CSS, Swiper.js, React Slick, React Icons  
+**Backend:** Firebase (Authentication, Hosting, Database)
+
+---
