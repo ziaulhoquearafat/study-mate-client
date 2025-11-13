@@ -4,7 +4,7 @@ const FindPartnersCard = ({ partner }) => {
   const { profileimage, subject, studyMode, experienceLevel, _id } = partner;
 
   return (
-    <div className="border-2 border-gray-200 rounded-2xl shadow-sm p-5 w-full max-w-sm mx-auto hover:shadow-md transition-all duration-300 hover:-translate-y-2 bg-white/80">
+    <div className="border-2 border-gray-200 rounded-2xl shadow-sm p-5 w-full max-w-sm mx-auto hover:shadow-md transition-all duration-300 hover:-translate-y-2 bg-white/80 dark:bg-gray-800">
       <div className="flex flex-col items-center gap-3">
         <img
           src={profileimage}
@@ -12,18 +12,22 @@ const FindPartnersCard = ({ partner }) => {
           className="w-24 h-24 rounded-full object-cover border"
         />
 
-        <h2 className="text-2xl font-semibold capitalize font-montserrat">
+        <h2 className="text-2xl font-semibold capitalize font-montserrat text-center">
           {subject}
         </h2>
 
         <div className="flex flex-col gap-1 text-sm text-gray-600 text-center">
-          <p>
+          <p className="dark:text-white font-bold">
             Study Mode:{" "}
-            <span className="font-medium text-gray-800">{studyMode}</span>
+            <span className="font-medium text-gray-800 dark:text-white">
+              {studyMode}
+            </span>
           </p>
-          <p>
+          <p className="dark:text-white font-bold">
             Experience:{" "}
-            <span className="font-medium text-gray-800">{experienceLevel}</span>
+            <span className="font-medium text-gray-800 dark:text-white">
+              {experienceLevel}
+            </span>
           </p>
         </div>
 

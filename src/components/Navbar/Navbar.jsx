@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { CgProfile } from "react-icons/cg";
 import { IoIosLogOut } from "react-icons/io";
@@ -43,8 +43,20 @@ const Navbar = () => {
       });
   };
 
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  useEffect(() => {
+    const html = document.querySelector("html");
+    html.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const handleTheme = (checked) => {
+    setTheme(checked ? "dark" : "light");
+  };
+
   return (
-    <div className="bg-[#05305a] relative z-50">
+    <div className="bg-[#05305a] relative z-50 dark:bg-gray-950">
       <div className="navbar w-11/12 mx-auto shadow-sm p-0">
         <div className="navbar-start">
           <div className="dropdown">
@@ -118,6 +130,13 @@ const Navbar = () => {
                       <IoIosLogOut /> Logout
                     </a>
                   </li>
+
+                  <input
+                    onChange={(e) => handleTheme(e.target.checked)}
+                    type="checkbox"
+                    defaultChecked={localStorage.getItem("theme") === "dark"}
+                    className="toggle"
+                  />
                 </ul>
               </div>
             </div>

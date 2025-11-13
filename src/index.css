@@ -18,8 +18,10 @@ a.active {
 
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark, cupcake;
+  themes: light --default, dark --prefersdark;
 }
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 .slick-slide > div {
   margin: 0 10px;

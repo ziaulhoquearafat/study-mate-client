@@ -60,21 +60,25 @@ const Testimonial = () => {
 
   return (
     <div className="py-20 w-11/12 mx-auto">
-      <h2 className="font-montserrat text-4xl mb-12 text-center font-bold text-[#05305a]">
+      <h2 className="font-montserrat text-4xl mb-12 text-center font-bold text-[#05305a] dark:text-white">
         What Our Students Say
       </h2>
       <Slider {...settings}>
         {data.map((d, index) => (
           <div key={index} className="px-3 h-95 py-10">
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 hover:scale-105 transform transition duration-300 h-full flex flex-col items-center text-center">
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 hover:scale-105 transform transition duration-300 h-full flex flex-col items-center text-center">
               <img
                 src={d.image}
                 alt={d.name}
                 className="w-24 h-24 rounded-full border-4 border-[#05305a] mb-5 object-cover"
               />
-              <h3 className="text-xl font-semibold text-[#05305a]">{d.name}</h3>
-              <p className="text-gray-500 mb-3">{d.role}</p>
-              <p className="text-gray-600 text-sm">{d.message}</p>
+              <h3 className="text-xl font-semibold text-[#05305a] dark:text-white">
+                {d.name}
+              </h3>
+              <p className="text-gray-500 mb-3 dark:text-gray-400">{d.role}</p>
+              <p className="text-gray-600 text-sm dark:text-gray-400">
+                {d.message}
+              </p>
             </div>
           </div>
         ))}

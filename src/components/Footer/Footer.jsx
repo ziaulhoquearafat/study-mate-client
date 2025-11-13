@@ -3,16 +3,15 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#05305a] text-white">
+    <footer className="bg-[#05305a] text-white dark:bg-gray-950">
       {/* Top section */}
       <div className="w-11/12 mx-auto py-10 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
         {/* About section prothome */}
         <div>
+          <p className="text-xl md:text-2xl uppercase font-montserrat font-bold text-white mb-5">
+            Study<span className="text-amber-300">Mate</span>
+          </p>
           <p className="text-base text-gray-200 mb-4 leading-relaxed">
-            <p className="text-xl md:text-2xl uppercase font-montserrat font-bold text-white">
-              Study<span className="text-amber-300">Mate</span>
-            </p>
-            <br />
             Helps students find and connect with study partners, making learning
             more interactive and effective.
           </p>
