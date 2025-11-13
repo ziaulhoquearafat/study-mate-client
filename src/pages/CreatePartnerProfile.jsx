@@ -22,7 +22,10 @@ const CreatePartnerProfile = () => {
 
     fetch("http://localhost:3000/partner", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        authorization: `Bearrer ${user.accessToken}`,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(partnerProfileInfo),
     })
       .then((res) => res.json())

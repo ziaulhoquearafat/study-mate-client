@@ -37,6 +37,7 @@ const PartnerDetails = () => {
     fetch(`http://localhost:3000/partner-request/${partners._id}`, {
       method: "POST",
       headers: {
+        authorization: `Bearrer ${user.accessToken}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(partnerReq),
