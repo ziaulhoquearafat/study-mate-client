@@ -15,9 +15,9 @@ const TopRatedPartners = () => {
   }, []);
 
   return (
-    <section className="bg-[#dee6f0] py-16 px-6">
+    <section className="bg-[#dee6f0] py-16">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="font-montserrat text-3xl mb-10 text-center font-bold text-[#05305a]">
+        <h2 className="font-montserrat text-4xl mb-10 text-center font-bold text-[#05305a]">
           Top Rated Study Partners
         </h2>
 
@@ -41,7 +41,7 @@ const TopRatedPartners = () => {
               </p>
               <Link
                 to={`/partner-profile/${p._id}`}
-                className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition"
+                className="btn btn-outline btn-primary rounded-full mt-2 font-montserrat"
               >
                 View Profile
               </Link>

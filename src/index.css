@@ -21,6 +21,10 @@ a.active {
   themes: light --default, dark --prefersdark, cupcake;
 }
 
+.slick-slide > div {
+  margin: 0 10px;
+}
+
 /* color
 navbar - #05305a active- #32bee9 text-white
 footer - #012147 to 
