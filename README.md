@@ -6,7 +6,7 @@ A modern web application designed to help students find the perfect study partne
 
 ## 🌐 Live Site
 
-🔗 [Find Study Partner - Live Website](https://your-live-site-url.com)
+🔗 [Find Study Partner - Live Website](https://study-mate-728a9.web.app/)
 
 ---
 
