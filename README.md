@@ -32,4 +32,7 @@ Install my-project with npm
   npm install my-project
   cd my-project
 ```
-    
+
+<img width="1440" height="2713" alt="image" src="https://github.com/user-attachments/assets/88fe7480-ca05-47d7-b5e5-b297af94cf96" />
+
+
