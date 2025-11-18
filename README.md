@@ -1,29 +1,35 @@
-# 🎓 Find Study Partner
 
-A modern web application designed to help students find the perfect study partner based on their subjects and experience level. Built with React, Tailwind CSS, and Firebase — ensuring smooth UI, secure authentication, and responsive design.
+# Study Mate
+Study Mate is a modern web application designed to help students find the perfect study partner based on their subjects and experience level. This platform provides a seamless and intuitive user experience, allowing students to create profiles, browse partner requests, and manage their connections efficiently.
 
----
+## Kay Features
 
-## 🌐 Live Site
+- User-friendly Interface: Built with React and Tailwind CSS for a smooth, responsive, and visually appealing UI.
 
-🔗 [Find Study Partner - Live Website](https://study-mate-728a9.web.app/)
+- Secure Authentication: Integrated with Firebase for reliable and secure login, registration, and user management.
 
----
+- Partner Matching: Students can search and filter potential study partners based on subject expertise and experience level.
 
-## ✨ Key Features
+- Real-time Interaction: View and manage partner requests, connections, and updates instantly.
 
-- 🔍 **Search by Subject:** Users can easily search for study partners based on specific subjects.
-- 📊 **Sort by Experience Level:** Find partners who match your preferred expertise — Beginner, Intermediate, Mid-level, or Expert.
-- 🔐 **Secure Authentication:** Integrated with Firebase for safe and smooth user login and registration.
-- 🧑‍🤝‍🧑 **Partner Listing & Profile:** Displays all available partners with their details like name, subject, and experience level.
-- 💬 **Interactive UI:** Modern responsive design using Tailwind CSS and Swiper.js for smooth animations and sliders.
-- 🌈 **Toast Notifications:** Real-time feedback for user actions using React Hot Toast and SweetAlert2.
+- Dark Mode Support: Users can switch between light and dark themes for comfortable usage.
 
----
 
-## 🛠️ Technologies Used
+## Tech Stack
 
-**Frontend:** React, Tailwind CSS, Swiper.js, React Slick, React Icons  
-**Backend:** Firebase (Authentication, Hosting, Database)
+**Client:** React, Tailwind CSS, Firebase, 
 
----
+**Server:** MongoDB, Express.js, Node.js
+
+
+
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install my-project
+  cd my-project
+```
+    
